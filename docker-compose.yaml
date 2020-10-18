@@ -1,0 +1,12 @@
+version: "3.2"
+
+services:
+  json-placeholder:
+    image: bomb0069/mountebank:with-curl
+    volumes: 
+      - ./imposters:/imposters
+      - ./output:/output
+    ports:
+      - 2525:2525
+      - 3100:3000
+    command: --configfile /imposters/imposters.json --allowInjection --loglevel debug

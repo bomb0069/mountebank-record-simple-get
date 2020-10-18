@@ -1,0 +1,32 @@
+{
+  "imposters": [
+    {
+      "port": 3000,
+      "protocol": "http",
+      "name": "jsonplaceholder",
+      "stubs": [
+        {
+          "responses": [
+            {
+              "proxy": {
+                "to": "http://jsonplaceholder.typicode.com",
+                "addWaitBehavior": true,
+                "predicateGenerators": [
+                  {
+                    "matches": {
+                      "method": true,
+                      "path": true,
+                      "query": true,
+                      "body": true
+                    },
+                    "caseSensitive": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
