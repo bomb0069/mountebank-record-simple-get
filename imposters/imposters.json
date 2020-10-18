@@ -9,7 +9,7 @@
           "responses": [
             {
               "proxy": {
-                "to": "http://jsonplaceholder.typicode.com",
+                "to": "https://jsonplaceholder.typicode.com",
                 "addWaitBehavior": true,
                 "predicateGenerators": [
                   {
